@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <title>Practical 9</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+      
+        
+      
+          html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+          }
+      
+          #container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+          }
+      
+
+
+        .header{
+            width: 100%;
+            height: 70px;
+            background-color: grey;
+            max-width: 1200px;
+            position: fixed;
+            top: 0;
+        }
+        .header .menu{
+            list-style: none;
+            float: right;
+        }
+        .menu li{
+            display: inline;
+            line-height: 70px;
+        }
+        .menu li a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 0px 40px;
+            transition: .4s;
+        }
+        .menu li a:hover,
+        .show-btn:hover , .hide-btn:hover{
+            color: skyblue;
+
+        }
+       .show-btn , .hide-btn
+       {
+           font-size: 30px;
+           color: white;
+           line-height: 70px;
+           display:none;
+           transition: .4s;
+
+       }
+       .show-btn
+       {
+           float:right;
+       }
+       #chk{
+           position: absolute;
+           visibility: hidden;
+           z-index: -10;
+       }
+
+     
+      
+    #banner {
+        width: 100%;
+        margin-top: 90px;
+        height: 680px;
+        margin-bottom: 15px;
+        display: flex;
+        font-size:72px;
+        color: white;
+        background-image: url(../img/banner_P8.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+  
+      #banner h2 {
+        margin: 20px 20px;
+        color: #fff;
+      }
+
+
+      #circle-container {
+        width: 100%;
+        margin: 45px auto;
+      }
+  
+      #circle-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+  
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        float: left;
+        margin-left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+      #section-2::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      #left-side {
+        width: 50%;
+        height: 550px;
+        background-color: gray;
+        float: left;
+        color: #fff;
+      }
+  
+      #left>h2 {
+        text-align: left;
+        margin: 10px 5px;
+      }
+  
+      #left p {
+        font-size: 20px;
+        padding: 10px;
+        text-align: justify;
+        line-height: 28px;
+      }
+  
+      #right-side {
+        width: 48%;
+        height: 550px;
+        float: right;
+      }
+  
+      .artical {
+        height: 31%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        overflow: hidden;
+      }
+  
+      #p1 {
+        background-image: url(../img/a_P8.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+  
+      #p2 {
+        background-image: url(../img/b_P8.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+  
+      #p3 {
+        background-image: url(../img/c_P8.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #section-3 {
+        width: 100%;
+        margin: 15px auto;
+        
+      }
+  
+      #section-3::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+  
+      .tech {
+        width: 20%;
+        float: left;
+        margin-left: 50px;
+        background-color: lightgrey;
+        border-radius: 8px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+      }
+  
+      .tech>img {
+        width: 100%;
+        margin-bottom: 10px;
+        height: 150px;
+        
+      }
+  
+      .tech>h4 {
+        margin: 0px 10px;
+        text-align: center;
+      }
+  
+      .tech>p {
+        margin: 10px;
+        font-size: 15px;
+        text-align: justify;
+        line-height: 25px;
+        color: white;
+      }
+  
+      .tech>a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        background-color: red;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 8px;
+      }
+  
+      h1 {
+        color: black;
+        font-size: 40px;
+        text-align: center;
+        padding: 25px 0px;
+      }
+  
+      .tech>a:hover {
+        background-color: blue;
+      }
+      #footer {
+        background-color: plum;
+        height: 100px;
+      }
+  
+      #footer>p {
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 20px;
+      }
+  /* Break-point */
+ @media (min-width: 801px) and (max-width: 1199px) {
+  .menu {
+    list-style: none;
+    float: right;
+  }
+
+  .menu li {
+    line-height: 70px;
+    display: inline-block;
+  }
+
+  .menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .menu li a:hover {
+    color: black;
+    background-color: white;
+  }
+
+  html {
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  .show-btn,
+  .hide-btn,
+  #chk {
+    font-size: 30px;
+    line-height: 70px;
+    color: white;
+    display: none;
+    float: right;
+    padding-right: 20px;
+  }
+
+  /* ------Header Container-------- */
+
+  #header {
+    width: 100%;
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    height: 70px;
+  }
+
+  /* ------------------Banner ------------- */
+
+  #banner {
+    width: 100%;
+    margin-top: 90px;
+    height: 680px;
+    margin-bottom: 15px;
+    display: flex;
+    font-size: 40px;
+    color: white;
+  }
+
+  #banner {
+    background-image: url(../img/banner_P8.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #banner h2 {
+    margin: 20px 20px;
+    color: #fff;
+  }
+
+  /* team for 800 to 1199 */
+
+  #circle-container {
+    width: 100%;
+  }
+
+  #circle-container::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .circle img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: goldenrod;
+    float: left;
+    margin-left: 15%;
+    margin-bottom: 20px;
+  }
+
+  /* About for 800px to 1199px*/
+
+  #sec2-container::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  #left-side {
+    width: 50%;
+    height: 550px;
+    background-color: gray;
+    float: left;
+    color: #fff;
+  }
+
+  #left-p>h2 {
+    text-align: left;
+    margin: 10px 5px;
+  }
+
+  #left-p>p {
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 28px;
+  }
+
+  #right-side {
+    width: 48%;
+    height: 550px;
+    float: right;
+  }
+
+  .artical {
+    height: 31%;
+    margin-bottom: 20px;
+    background-color: chocolate;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    overflow: hidden;
+  }
+
+  #p1 {
+    background-image: url(../img/a_P8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #p2 {
+    background-image: url(../img/b_P8.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #p3 {
+    background-image: url(../img/c_P8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* --------- Technologies Used------------ */
+  #section-3 {
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  #section-3::after  {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .tech {
+    width: 30%;
+    float: left;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    background-color: lightgrey;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .tech>img {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  .tech>h4 {
+    margin: 0px 10px;
+    text-align: center;
+  }
+
+  .tech>p {
+    margin: 10px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 30px;
+    color: white;
+  }
+
+  .tech>a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    padding: 25px 0px;
+  }
+
+  .tech>a:hover {
+    background-color: blue;
+  }
+
+  /* footer */
+  #footer {
+    background-color: plum;
+    height: 100px;
+  }
+
+  #footer>p {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+}
+  @media (max-width: 800px)  and (min-width: 645px){
+    .header{
+      width: 100%;
+      height: 70px;
+      background-color: grey;
+      position: fixed;
+      top: 0;
+  }
+     .show-btn , .hide-btn
+     {  display: block;}
+     .menu{
+         position: fixed;
+         top: 0;
+         /*slider effect*/
+         right: -100%;
+         width: 100%;
+         height: 100vh;
+         background-color: black;
+         text-align: center;
+         padding: 80px 0px;
+         transition: .8s;
+         line-height: normal;
+
+     }  
+     
+     #chk:checked ~ .menu{
+         right: 0;
+     }
+     .menu li{
+         display: block;
+     }
+     .menu li a{
+         display: block;
+        
+     }
+     .hide-btn{
+         position: absolute;
+         right: 20px;
+         top: 10px;
+     }
+
+/**  banner for the screen smaller then 800px**/
+#banner {
+  width: 100%;
+  margin-top: 90px;
+  height: 380px;
+  margin-bottom: 15px;
+  display: flex;
+  font-size:42px;
+  color: white;
+  background-image: url(../img/banner_P8.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#banner h2 {
+  margin: 20px 20px;
+  color: #fff;
+}
+/** team member css for screen less then 800px**/
+#circle-container {
+  width: 100%;
+  height: 620px;
+}
+
+
+
+.circle img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+/** about  for screen less then 800px**/
+
+#left-side {
+  width: 100%;
+  height: 180px;
+  background-color: gray;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#left>h2 {
+  text-align: left;
+  margin: 10px 5px;
+}
+
+#left p {
+  font-size: 20px;
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+}
+
+#right-side {
+  width: 100%;
+  height: 450px;
+  
+}
+
+.artical {
+  height: 30%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  overflow: hidden;
+}
+
+#p1 {
+  background-image: url(../img/a_P8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#p2 {
+  background-image: url(../img/b_P8.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#p3 {
+  background-image: url(../img/c_P8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/** tech for screen less then 800px**/
+#section-3 {
+  width: 100%;
+ 
+  
+}
+
+#section-3::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tech {
+  width: 40%;
+  float: left;
+  margin-left: 50px;
+  background-color: lightgrey;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.tech>img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 150px;
+  
+}
+
+.tech>h4 {
+  margin: 0px 10px;
+  text-align: center;
+}
+
+.tech>p {
+  margin: 10px;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 25px;
+  color: white;
+}
+
+.tech>a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.tech>a:hover {
+  background-color: blue;
+}
+}
+/**need not for footer**/
+@media (max-width: 645px) {
+  #container {
+    
+    min-width: 300px;
+    
+  }
+  .show-btn , .hide-btn
+     {  display: block;}
+     .menu{
+         position: fixed;
+         top: 0;
+         right: -100%;
+         width: 100%;
+         height: 100vh;
+         background-color: black;
+         text-align: center;
+         padding: 80px 0px;
+         transition: .8s;
+         line-height: normal;
+
+     }  
+     
+     #chk:checked ~ .menu{
+         right: 0;
+     }
+     .menu li{
+         display: block;
+     }
+     .menu li a{
+         display: block;
+        
+     }
+     .hide-btn{
+         position: absolute;
+         right: 20px;
+         top: 10px;
+     }
+
+/**  banner for the screen smaller then 625px**/
+#banner {
+  width: 100%;
+  margin-top: 90px;
+  height: 280px;
+  margin-bottom: 15px;
+  display: flex;
+  font-size:42px;
+  color: white;
+  background-image: url(../img/banner_P8.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#banner h2 {
+  margin: 20px 20px;
+  color: #fff;
+}
+/** team member css for screen less then 625px**/
+#circle-container {
+  width: 100%;
+  height: 620px;
+}
+
+
+
+.circle img {
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+/** about  for screen less then 625px**/
+
+#left-side {
+  width: 100%;
+  height: 180px;
+  background-color: gray;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+#left>h2 {
+  text-align: left;
+  margin: 10px 5px;
+}
+
+#left p {
+  font-size: 20px;
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+}
+
+#right-side {
+  width: 100%;
+  height: 400px;
+  
+}
+
+.artical {
+  height: 30%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  overflow: hidden;
+}
+
+#p1 {
+  background-image: url(../img/a_P8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#p2 {
+  background-image: url(../img/b_P8.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#p3 {
+  background-image: url(../img/c_P8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/** tech for screen less then 645px**/
+#section-3 {
+  width: 100%;
+  padding-left: 20%;
+  
+}
+
+#section-3::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.tech {
+  width: 75%;
+  float: left;
+  margin-left: 5px;
+  background-color: lightgrey;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.tech>img {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 150px;
+  
+}
+
+.tech>h4 {
+  margin: 0px 10px;
+  text-align: center;
+}
+
+.tech>p {
+  margin: 10px;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 25px;
+  color: white;
+}
+
+.tech>a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background-color: red;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.tech>a:hover {
+  background-color: blue;
+}
+  }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+      <a name="top"></a>
+    <div class="header">
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars" ></i>
+
+        </label>
+        <ul  class="menu">
+
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#team">TEAM</a></li>
+            <li><a href="#Technologies">TECHNOLOGIES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+         
+          <label for="chk" class="hide-btn">
+           
+            <i class="fa fa-times" ></i>
+        </ul>
+        </label>
+     </div>    
+    
+     
+        <div id="banner">PRACTICAL - 9</div>
+       
+        <div id="circle-container">
+          <a name="team"></a>
+            <h1>Team Members</h1>
+            
+            <div class="circle">
+              <img src="../img/1_P8.png" alt="" />
+            </div>
+            <div class="circle">
+              <img src="../img/2_P8.png" alt="" />
+            </div>
+            <div class="circle">
+              <img src="../img/3_P8.png" alt="" />
+            </div>
+            <div class="circle">
+              <img src="../img/4_P8.png" alt="" />
+            </div>
+          </div>
+          <div id="section-2">
+            <a name="about"></a>
+            <h1>About Us</h1>
+           
+            <div id="left-side">
+              <div class="left-content">
+                <div id="left">
+                  <h2>About Projects</h2>
+                  <p>
+                    temporibus similique sit tenetur quasi exercitationem! Repellat
+                    obcaecati quibusdam iste explicabo laborum veritatis velit
+                    accusantium animi dolorum nemo ut quam, quo cum in suscipit
+                    fugiat minima corrupti voluptates tempora alias aspernatur esse
+                    dolore iure? Libero iste quo nam sequi nulla, minima architecto
+                    est cum expedita omnis enim culpa reiciendis nesciunt quod
+                    deserunt, nostrum corporis tempore impedit veritatis ut
+                    perspiciatis rerum. Amet, harum pariatur. Quo dolorum
+                    necessitatibus eos beatae eveniet, earum cum blanditiis,
+                    accusamus vitae, nisi voluptas dignissimos modi quibusdam aut
+                    veniam deserunt accusantium possimus atque? Distinctio voluptas
+                    nemo, fuga laboriosam perspiciatis eum debitis nesciunt quidem
+                    iure ratione! Eaque ea eum maxime temporibus dolor nostrum, iure
+                    enim, vero in atque quod animi! Mollitia alias magnam nisi
+                    suscipit ab ducimus dolores provident. Distinctio veritatis
+                    quaerat explicabo fuga neque culpa facere suscipit vel, totam
+                    quasi!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="right-side">
+              <div class="artical" id="p1">
+                <h2>Project-1</h2>
+              </div>
+              <div class="artical" id="p2">
+                <h2>Project-2</h2>
+              </div>
+              <div class="artical" id="p3">
+                <h2>Project-3</h2>
+              </div>
+            </div>
+          </div>
+          <div id="section-3">
+            <a name="Technologies"></a>
+            <h1>Technologies Used</h1>
+            
+            <div class="tech">
+                
+              <img src="../img/html.jpg" alt="" />
+              <h4>Introduction to HTML</h4>
+              <p>Hypertext Markup Language (HTML) is the standard markup language for documents
+                 designed to be displayed in a web browser. It can be assisted by technologies 
+                 such as css
+
+              </p>
+      
+              <a href="Practical05-html.html">Read More</a>
+            </div>
+            <div class="tech">
+              <img src="../img/css.png" alt="" />
+              <h4>Introduction to CSS</h4>
+              <p>Cascading Style Sheets is a style sheet language used for describing the presentation
+                 of a document written in a markup language like HTML.CSS is a cornerstone technology
+                
+              </p>
+      
+              <a href="practical05-css.html">Read More</a>
+            </div>
+            <div class="tech">
+              <img src="../img/js.jpg" alt="" />
+              <h4>Introduction to JavaScript</h4>
+              <p>JavaScript  often abbreviated as .JS, is a programming language that conforms to the 
+                 ECMAScript specification. JavaScript is high-level, often just-in-time compiled , and
+                 multi-paradigm. 
+              </p>
+      
+              <a href="Practical05-js.html">Read More</a>
+            </div>
+            <div class="tech">
+              <img src="../img/bootstrap-1.jpg" alt="" />
+              <h4>Introduction to Bootstrap</h4>
+              <p>
+                Bootstrap is a web framework that focuses on simplifying the development of informative
+                web pages . The primary purpose of adding it to a web project is  to apply Bootstrap's 
+                choices
+              </p>
+      
+              <a href="Practical05-bootstrap.html">Read More</a>
+            </div>
+          </div>
+          <a name="contact"></a>
+    <h1>Contact</h1>
+    <div id="footer">
+      <p>
+        Website Template for Practical-9 &copy;
+        <a href="https://beta-labs.in">Beta-labs</a><br /><br />
+        <a href="#top">Back to top</a>
+      </p>
+    </div>
+
+</div>
+</body>
+</html> 

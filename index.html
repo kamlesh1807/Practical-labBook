@@ -12,35 +12,41 @@
 
 a:link
 {
-  color: rgb(106, 243, 124);
-}
-a:active
-{
-  color: rgb(220, 20, 20);
+  color:slategrey;
 }
 
-a:visited
-{
-  color: rgb(235, 92, 35);
-}
-body{
-  background-image: url(img/full-stack-developer-Shutterstock.jpg);
-  color: white;
-  font: 38px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-    @media(max-width: 600px)
-    {
-      
-    }
+
+  #container{
+    width: 100%;
+    
+    height: 98%;
+    margin: 15px;
+    display: flex;
+  }
+  #container h1{
+    padding-top: 10%;
+    color: purple ;
+    
+  }
+
+  .check{
+    color: white;
+    background-image:url(/img/wood.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .check p,h3{
+    padding-left: 10px;
+    
+  }
 
     </style>
       
 </head>
 <body>
-    <a name="top"><h1  style="color:black">Welcome to Fullstack Course</h1></a>
-    
+    <div id="container">
+      <h1>Welcome to Fullstack Course</h1>
+  <div class="check">  
 <h3>About the Course</h3>
 <p>Front-end web development is everything involved in programming the user interface of a web application. typically it refers to the Hypertext 
   Markup Language (HTML), Cascading Style Sheets (CSS) and javaScript portion of web site production as opposed to the database or server-side
@@ -70,8 +76,8 @@ body{
        <li>Create a Responsive Web Layout with Responsive Navigation Bar.
         <a href="P/Practical09.html" target="_self"> Practical-09</a></li><br>
         
-
+      </div>
 </ol>
-    
+  </div>  
 </body>
 </html>

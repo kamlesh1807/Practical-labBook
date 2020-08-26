@@ -19,15 +19,22 @@ a:link
   #container{
     width: 100%;
     
-    height: 98%;
+    height: 550px;
     margin: 15px;
     display: flex;
   }
   #container h1{
+    width: 10%;
     padding-top: 10%;
     color: purple ;
     
   }
+  #container::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
 
   .check{
     color: white;
@@ -45,7 +52,7 @@ a:link
 </head>
 <body>
     <div id="container">
-      <h1>Welcome to Fullstack Course</h1>
+     <div class="head"><h1>Welcome to Fullstack Course</h1></div> 
   <div class="check">  
 <h3>About the Course</h3>
 <p>Front-end web development is everything involved in programming the user interface of a web application. typically it refers to the Hypertext 

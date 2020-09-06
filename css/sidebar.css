@@ -65,7 +65,9 @@ border-bottom : 2px solid rgba(255,255,255,0.1);
     padding:15px 25px;
     transition: .4s;
 }
-
+a i {
+    margin-right: 15px;
+}
 .sidebar ul li a:hover{
     border-left: 10px solid white;
 }

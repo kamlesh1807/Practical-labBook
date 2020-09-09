@@ -1,0 +1,89 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-width: 100%;
+    background-color: rgba(14, 151, 231, 0.692);
+  }
+  .top {
+    width: 1350px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  table,
+  tr,
+  td {
+    border-bottom: 1px solid gray;
+    border-spacing: 0px;
+    border-collapse: separate;
+    padding: 11px;
+    font-size: 20px;
+  }
+  th{
+    border-bottom: 1px solid gray;
+  }
+  tr,
+  th {
+    text-align: justify;
+  }
+  table tr th:nth-child(1) {
+    padding: 13px;
+  }
+  table tr td:nth-child(4) {
+    color: green;
+    margin: 0 45px;
+  }
+  tr:last-child td{
+    border: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.973);
+  }
+  
+  i {
+    color: gray;
+  }
+  table {
+    width: 1300px;
+    margin: 20px auto;
+    margin-top: 0px;
+    border: 2px solid black;  
+    border-top: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  h4 {
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    background-color: rgb(29, 109, 155);
+    padding: 15px;
+    border: 2px solid rgb(29, 109, 155);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  table tr:hover {
+    background-color: rgba(245, 222, 179, 0.548);
+  }
+  a:hover {
+    color: blue;
+  }
+  .fa-pencil:hover {
+    color: blue;
+    cursor: progress;
+  }
+  .fa-trash:hover {
+    color: red;
+    cursor: progress;
+  }

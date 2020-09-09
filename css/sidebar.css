@@ -85,6 +85,7 @@ i{
     font-size:30px;
     color: white;
 }
+
 .show-btn, .hide-btn{
     font-size: 35px;
     color: white;
@@ -94,6 +95,9 @@ i{
 }
 .hide-btn{
     opacity: 0;
+}
+#chk{
+    visibility: hidden;
 }
 #chk:checked ~ .sidebar{
     left:0;

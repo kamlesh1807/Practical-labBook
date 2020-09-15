@@ -7,7 +7,7 @@
 .main-content
 {
     width: 100%;
-    height: 100px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,16 +34,16 @@ footer
 }
 .sec-1 h2
 {
-    font-size: 18px;
+    font-size: 26px;
     color: white;
     text-transform: uppercase;
 }
 .about p
-{
+{   font-size: 20px;
     text-align: justify;
     color: grey;
     line-height: 24px;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 .sec-1 ul
 {
@@ -68,7 +68,6 @@ span
 i
 {
     color: grey;
-    font-size: ;
 }
 .sec-2
 {
@@ -87,6 +86,7 @@ i
 {
     display: inline-block;
     padding: 10px 25px;
+    margin-left: 20px;
     color: white;
     background-color: rgb(248, 3, 3);
     border-radius: 20px;
@@ -124,27 +124,27 @@ i
     line-height: 20px;
     text-align: center;
 }
-.sec-3 ul li:nth-child(1):hover
+.sec-3 ul li:nth-child(1)
 {
     background-color: #3b5999;
 
 }
-.sec-3 ul li:nth-child(2):hover
+.sec-3 ul li:nth-child(2)
 {
     background-color: #55acee;
     
 }
-.sec-3 ul li:nth-child(3):hover
+.sec-3 ul li:nth-child(3)
 {
     background-color: #dd4b39;
     
 }
-.sec-3 ul li:nth-child(4):hover
+.sec-3 ul li:nth-child(4)
 {
     background-color: #0077B5;
     
 }
-.sec-3 ul li:nth-child(5):hover
+.sec-3 ul li:nth-child(5)
 {
     background-color: #ea4c89;
     
@@ -249,7 +249,7 @@ hr
     i
     {
         color: grey;
-        font-size: ;
+        
     }
     .sec-2
     {
@@ -268,6 +268,7 @@ hr
     {
         display: inline-block;
         padding: 10px 25px;
+        margin-left: 20px;
         color: white;
         background-color: rgb(248, 3, 3);
         border-radius: 20px;
@@ -304,27 +305,27 @@ hr
         line-height: 20px;
         text-align: center;
     }
-    .sec-3 ul li:nth-child(1):hover
+    .sec-3 ul li:nth-child(1)
     {
         background-color: #3b5999;
     
     }
-    .sec-3 ul li:nth-child(2):hover
+    .sec-3 ul li:nth-child(2)
     {
         background-color: #55acee;
         
     }
-    .sec-3 ul li:nth-child(3):hover
+    .sec-3 ul li:nth-child(3)
     {
         background-color: #dd4b39;
         
     }
-    .sec-3 ul li:nth-child(4):hover
+    .sec-3 ul li:nth-child(4)
     {
         background-color: #0077B5;
         
     }
-    .sec-3 ul li:nth-child(5):hover
+    .sec-3 ul li:nth-child(5)
     {
         background-color: #ea4c89;
         
@@ -451,6 +452,7 @@ i
 {
     display: inline-block;
     padding: 20px 25px;
+    margin-left: 20px;
     margin-left: 75px;
     color: white;
     background-color: rgb(248, 3, 3);
@@ -489,27 +491,27 @@ i
     line-height: 20px;
     text-align: center;
 }
-.sec-3 ul li:nth-child(1):hover
+.sec-3 ul li:nth-child(1)
 {
-    background-color: #7f9e11;
+    background-color: #2058c0;
 
 }
-.sec-3 ul li:nth-child(2):hover
+.sec-3 ul li:nth-child(2)
 {
     background-color: #55acee;
     
 }
-.sec-3 ul li:nth-child(3):hover
+.sec-3 ul li:nth-child(3)
 {
     background-color: #dd4b39;
     
 }
-.sec-3 ul li:nth-child(4):hover
+.sec-3 ul li:nth-child(4)
 {
     background-color: #0077B5;
     
 }
-.sec-3 ul li:nth-child(5):hover
+.sec-3 ul li:nth-child(5)
 {
     background-color: #ea4c89;
     

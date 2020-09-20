@@ -28,11 +28,11 @@ body{
 }
 
 .form-template1{
-    width: 350px;
+    width: 340px;
     height: 390px;
     background-color:#fff;
     margin-top: 50px;
-    margin: 25px;
+    margin: 28px;
 }
 
 .form-header-t1{
@@ -100,7 +100,7 @@ input[type='submit']{
 /* template  2 */
 
 .form-template2{
-    width: 350px;
+    width: 340px;
     height: 390px;
     background-color:#fff;
     margin-top: 50px;
@@ -168,9 +168,9 @@ input[type='checkbox'] {
     margin-left: 10px;
 }
 .form-footer-t2{
-    margin-top: -7px;
+    margin-top: -12px;
     background-color: #778899;
-    height: 91px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +183,7 @@ input[type='checkbox'] {
 /*template 3*/
 
 .form-template3{
-    width: 350px;
+    width: 340px;
     height: 390px;
     background-color:#fff;
     margin-top: 50px;
